@@ -25,7 +25,7 @@ url                      : "https://tmdnsdl.github.io"
 baseurl                  : # "/blog"
 repository               : "tmdnsdl/tmdnsdl.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # "/assets/images/logo/logo.jpg"
+logo                     : "/assets/image/logo.jpg"
 masthead_title           : "너구리의 기록" # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
