@@ -17,13 +17,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "ko-KR"
 title                    : "너구리의 기록"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+title_separator          : "&#124"
+subtitle                 : "1.0"
 name                     : "양승운"
 description              : "너구리의 블로그"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://tmdnsdl.github.io"
+baseurl                  : # "/blog"
+repository               : "tmdnsdl/tmdnsdl.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "너구리의 기록" # overrides the website title displayed in the masthead, use " " for no title
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "양승운"
+  avatar           : /assets/images/profile/me.jpg
+  bio              : "공부하는 개발자"
+  location         : "ko-KR"
+  email            : "tmdnsdl@hotmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
