@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "너구리의 기록"
+title                    : "너구리 일지"
 title_separator          : "&#124;"
 subtitle                 : # "너구리 일지"
 name                     : "너구리"
@@ -26,9 +26,10 @@ baseurl                  : # "/blog"
 repository               : "tmdnsdl/tmdnsdl.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/image/logo.jpg"
-masthead_title           : "너구리의 기록" # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
+masthead_title           : "너구리 blog" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true
 words_per_minute         : 200
+# 댓글 추가
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
@@ -53,6 +54,7 @@ comments:
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    # 구글 reCaptcha 셋팅
 reCaptcha:
   siteKey                :
   secret                 :
@@ -103,7 +105,7 @@ analytics:
 author:
   name             : "너구리"
   avatar           : /assets/image/me.jpg
-  bio              : "공부하는 너구리"
+  bio              : "공부하는 너구리<br> Java, Spring, DB, Server, Web"
   location         : "ko-KR"
   email            : "tmdnsdl@hotmail.com"
   links:
