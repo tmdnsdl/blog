@@ -1,6 +1,6 @@
 ---
 title: "Posts"
-layout: single
-permalink: /my-archive/
+permalink: /tags/
+layout: tags
 author_profile: true
 ---
