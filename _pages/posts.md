@@ -1,6 +1,6 @@
 ---
 title: "Posts"
-permalink: /tags/
-layout: tags
+permalink: /collection-archive/
+layout: collection-archive
 author_profile: true
 ---
