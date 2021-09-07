@@ -1,6 +1,6 @@
 ---
 title: "Posts"
-permalink: /collection-archive/
-layout: collection-archive
+permalink: /year-archive/
+layout: year-archive
 author_profile: true
 ---
