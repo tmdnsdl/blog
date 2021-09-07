@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Posts"
-    url: /my-archive/
+    url: /tags/
   - title: "Category"
     url: /categories/
   # - title: "Sample Posts"
