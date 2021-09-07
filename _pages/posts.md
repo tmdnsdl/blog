@@ -1,6 +1,6 @@
 ---
 title: "Posts"
-layout: posts
+layout: single
 permalink: /my-archive/
 author_profile: true
 ---
