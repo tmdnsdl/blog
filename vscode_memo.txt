@@ -1,0 +1,17 @@
+한줄삭제 : ctrl + shift + k
+텍스트 선택후 같은 텍스트 선택 : ctrl + d
+사이드바 on/off : ctrl + b
+git : ctrl + shift + g
+사이드바(Git) 열림
+주석 : ctrl+/
+
+markdown preview
+cmd-k v or ctrl-k v	Open preview to the Side
+cmd-shift-v or ctrl-shift-v	Open preview
+ctrl-shift-s	Sync preview / Sync source
+shift-enter	Run Code Chunk
+ctrl-shift-enter	Run all Code Chunks
+cmd-= or cmd-shift-=	Preview zoom in
+cmd-- or cmd-shift-_	Preview zoom out
+cmd-0	Preview reset zoom
+esc	Toggle sidebar TOC
