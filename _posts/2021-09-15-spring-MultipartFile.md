@@ -14,7 +14,7 @@ MultipartResolver 설정
 
 - Multipart 기능을 스프링에서 사용하려면 MultipartResolver를
 스프링 설정 파일에 등록해주어야 한다.
-- 스프링에서 기본으로 제공하는 MultipartResolver는 CommonsMultipartResolver이다. 
+- 스프링에서 기본으로 제공하는 MultipartResolver는 CommonsMultipartResolver이다.  
 CommonsMultipartResolver는 CommonsFileUpload API를 이용하여 Multipart를 처리해준다
 
 __servlet-context.xml에 MultipartResolver Bean을 등록__
@@ -61,4 +61,5 @@ org.springframework.web.MutipartFile 인터페이스는 업로드한 파일 및 
 --- | ---
 getOriginalFilename() | 업로드한 파일의 이름을 리턴
 byte[ ] getBytes() throws IOExcetion | 업로드한 파일 데이터를 리턴
-transferTo(File dest) throws IOException | 업로드한 파일 데이터를 지정한 파일에 저장한다
+transferTo(File dest) throws IOException | 업로드한 파일 데이터를 지정한  
+파일에 저장한다

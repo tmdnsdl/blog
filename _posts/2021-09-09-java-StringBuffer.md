@@ -7,7 +7,7 @@ categories: Java
 
 ---
 
-Java StringBuffer 클래스란 무엇인가?
+__Java StringBuffer 클래스란 무엇인가?__
 
 >
 > __StringBuffer 클래스 (출처:TCP SCHOOL)__
@@ -26,7 +26,7 @@ Java StringBuffer 클래스란 무엇인가?
 이러한 StringBuffer 클래스는 java.lang 패키지에 포함되어 제공됩니다.  
 >
 
-불변 클래스와 가변 클래스
+__불변 클래스와 가변 클래스__
 
 >
 >불변 클래스(immutable class)와 가변 클래스(mutable class)
