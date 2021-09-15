@@ -61,5 +61,4 @@ org.springframework.web.MutipartFile 인터페이스는 업로드한 파일 및 
 --- | ---
 getOriginalFilename() | 업로드한 파일의 이름을 리턴
 byte[ ] getBytes() throws IOExcetion | 업로드한 파일 데이터를 리턴
-transferTo(File dest) throws IOException | 업로드한 파일 데이터를 지정한  
-파일에 저장한다
+transferTo(File dest) throws IOException | 업로드한 파일 데이터를 지정한 파일에 저장한다
