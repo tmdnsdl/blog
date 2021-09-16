@@ -26,7 +26,7 @@ baseurl                  : # "/blog"
 repository               : "tmdnsdl/tmdnsdl.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/image/logo.jpg"
-masthead_title           : "너구리 blog" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "너구리의 블로그" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
 # 댓글 추가
@@ -111,7 +111,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:tmdnsdl@hotmail.com"
+      # url: "mailto:tmdnsdl@hotmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
