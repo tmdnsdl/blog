@@ -4,7 +4,7 @@ date: 2021-10-28
 categories: Java
 ---
 
-### Java 싱글톤(Singleton) 패턴
+### 싱글톤(Singleton) 패턴
 
 ---
 
