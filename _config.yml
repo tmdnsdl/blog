@@ -20,13 +20,13 @@ title                    : "너구리 일지"
 title_separator          : "&#124;"
 subtitle                 : # "너구리 일지"
 name                     : "너구리"
-description              : "너구리의 블로그"
+description              : "너구리의 기록일지"
 url                      : "https://tmdnsdl.github.io"
 baseurl                  : # "/blog"
 repository               : "tmdnsdl/tmdnsdl.github.com"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # "/assets/image/logo.jpg"
-masthead_title           : "너구리의 블로그" # overrides the website title displayed in the masthead, use " " for no title
+masthead_title           : "너구리의 기록일지" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true
 words_per_minute         : 200
 # 댓글 추가
