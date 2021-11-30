@@ -22,10 +22,12 @@ console.log(a==b); // 값이 같으므로 true를 리턴
 console.log(a===b); // 값이 같지만 데이터 타입이 달라 false를 리턴
 
 console.log(null==undefined); // 둘다 값이 없음 true를 리턴
-console.log(null===undefined); // 둘다 값이 없지만 데이터 타입은 다르므로 false를 리턴
+console.log(null===undefined); 
+// 둘다 값이 없지만 데이터 타입은 다르므로 false를 리턴
 
 console.log(true == 1); // true는 1이므로 true를 리턴
-console.log(true === 1); // 둘다 1이지만 데이터 타입이 달라 false를 리턴
+console.log(true === 1); 
+// 둘다 값은 1이지만 데이터 타입이 달라 false를 리턴
 
 ```
 
