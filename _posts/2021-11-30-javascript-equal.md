@@ -1,5 +1,5 @@
 ---
-title: "Javascript 비교 연산자에 대해 알아보자"
+title: "Javascript 비교 연산자"
 date: 2021-11-30
 categories: Javascript
 ---
