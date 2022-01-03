@@ -19,45 +19,45 @@ categories: Spring
 **web.xml 설정**
 
 ```
-    <error-page>
-		<exception-type>java.lang.Throwable</exception-type>
-		<location>/error/throwable</location>
-	</error-page>
-	<error-page>
-		<exception-type>java.lang.Exception</exception-type>
-		<location>/error/exception</location>
-	</error-page>
-	<error-page>
-		<exception-type>404</exception-type>
-		<location>/error/404</location>
-	</error-page>
-	<error-page>
-		<exception-type>403</exception-type>
-		<location>/error/403</location>
-	</error-page>
-	<error-page>
-		<exception-type>500</exception-type>
-		<location>/error/500</location>
-	</error-page>
-	<error-page>
-		<exception-type>503</exception-type>
-		<location>/error/503</location>
-	</error-page>
-	<error-page>
-		<exception-type>400</exception-type>
-		<location>/error/400</location>
-	</error-page>
-	<error-page>
-		<exception-type>405</exception-type>
-		<location>/error/405</location>
-	</error-page>
+<error-page>
+	<exception-type>java.lang.Throwable</exception-type>
+	<location>/error/throwable</location>
+</error-page>
+<error-page>
+	<exception-type>java.lang.Exception</exception-type>
+	<location>/error/exception</location>
+</error-page>
+<error-page>
+	<exception-type>404</exception-type>
+	<location>/error/404</location>
+</error-page>
+<error-page>
+	<exception-type>403</exception-type>
+	<location>/error/403</location>
+</error-page>
+<error-page>
+	<exception-type>500</exception-type>
+	<location>/error/500</location>
+</error-page>
+<error-page>
+	<exception-type>503</exception-type>
+	<location>/error/503</location>
+</error-page>
+<error-page>
+	<exception-type>400</exception-type>
+	<location>/error/400</location>
+</error-page>
+<error-page>
+	<exception-type>405</exception-type>
+	<location>/error/405</location>
+</error-page>
 ```
 
 web.xml에 해당하는 에러를 어떤 URL로 넘겨줄지에 대해 작성한다.
 
 ---
 
-**ErrorController**
+**Controller**
 
 ```
 package com.raccoon.solution;
@@ -151,7 +151,7 @@ public class ErrorController {
 }
 ```
 
-ErrorController에는 에러 로그처리와 각 에러에 해당하는 view로 보내주는 메시지를 작성한다.
+컨트롤러에 에러 로그처리와 각 에러에 해당하는 view로 보내주는 메시지를 작성한다.
 
 ---
 
