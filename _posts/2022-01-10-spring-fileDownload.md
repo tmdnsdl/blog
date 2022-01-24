@@ -1,6 +1,6 @@
 ---
 title: "스프링 파일 다운/삭제 기능 구현하기"
-date: 2022-01-03
+date: 2022-01-10
 categories: Spring
 ---
 
@@ -21,8 +21,8 @@ categories: Spring
 		String fileName = request.getParameter("file");
 
 		if(fileName != null) {
-			String filePath = "/upload/";
-			String originalFileName = ""; // 다운로드 받을 파일명 substring
+			String filePath = "/download/"; // 파일 경로
+			String originalFileName = "myfile"; // 다운로드 받을 파일명
 
 			InputStream input = null;
 			OutputStream output = null;
@@ -82,7 +82,7 @@ categories: Spring
 
 JSP 페이지에서 get, post방식으로 요청하는 것을 고려하여 작성되었다.
 파일명이 원본 파일명과 다르게 설정되어 있다면 구분자 등으로 원본 파일명으로 다운로드 할 수 있게 설정해준다.
-인터넷 익스플로러를 사용 중인 경우에도 문제가 없도록 구분을 하여 코드를 작성하였다.
+인터넷 익스플로러를 사용 중인 경우에도 문제가 없도록 코드를 작성하였다.
 
 ---
 
@@ -101,5 +101,5 @@ public void deleteFile(String fileName) {
 	}
 ```
 
-파일을 업로드 한 디렉토리에서 파일을 삭제하는 기능을 가진 메소드를 작성하였다.
-필요한 페이지에서 수정 / 삭제 기능을 구현할 때 사용한다.
+파일을 업로드 한 디렉토리에서 파일을 삭제하는 기능을 가진 메소드
+필요한 페이지에서 수정 / 삭제 기능을 구현할 때 사용하면 된다.

@@ -17,7 +17,7 @@ categories: Javascript
 화면의 넓이와 높이는 다른 사이즈로 설정할 수 있으며 이미지 크기도 설정할 수 있다.
 현재 코드에서는 아이폰 로딩 이미지를 사용하여 구현하였다.
 
-로딩 이미지 : gifer.com/en/gifs/loader
+로딩 이미지 다운 경로 : gifer.com/en/gifs/loader
 
 ---
 

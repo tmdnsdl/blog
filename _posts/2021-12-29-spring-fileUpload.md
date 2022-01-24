@@ -60,7 +60,7 @@ Controller에서는 다중 업로드 파일을 처리하기 위해 MultipartHttp
 **파일 업로드**
 
 ```
-public String uploadFile(String fileName, byte[] fileData, String uploadPath) {
+public String uploadFile(String fileName, byte[] fileData) {
 
     String uploadPath = "/upload/";
     File fileDirectory = new File(uploadPath);
@@ -83,5 +83,5 @@ public String uploadFile(String fileName, byte[] fileData, String uploadPath) {
 }
 ```
 
-디렉토리에 파일 업로드를 위한 기능을 구현하는 메소드를 작성한다.
+컨트롤러에 파일 업로드를 위한 기능을 구현하는 메소드를 작성한다.
 파일 이름이 중복 되더라도 고유성이 보장되는 파일 이름으로 저장하기 위해 UUID를 사용하여 파일 이름을 작성하여 저장한다.

@@ -175,4 +175,4 @@ public class ErrorController {
 </html>
 ```
 
-view에서는 에러에 해당하는 메시지를 표시하여 준다.
+view에서는 에러에 해당하는 메시지를 출력해준다.
