@@ -33,30 +33,30 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
 
 ```
     function checkFiles() {
-		const inputFile = document.getElementById("file");
-		const files = inputFile.files;
-		let fileSize = 0;
+  const inputFile = document.getElementById("file");
+  const files = inputFile.files;
+  let fileSize = 0;
 
-		//파일 사이즈 확인
-		for(let i=0; i<files.length;i++) {
-			fileSize += files[i].size;
-		}
+  //파일 사이즈 확인
+  for(let i=0; i<files.length;i++) {
+   fileSize += files[i].size;
+  }
 
-		for(let i=0; i<files.length; i++) {
-			// 파일 업로드 확장자 추가
-			if(!/\.((jpg|jpeg|ppt|doc|docx|xls|xlsx|hwp|png|pptx|pdf|csv)$/i.test(files[i].name)) {
-				alert('업로드 불가능한 확장자입니다.\n\n현재 파일: '+ files[i].name);
-				inputFile.value = "";
-				return false;
-			} else if(fileSize > 209715200) {
-				alert("파일은 200MB 이상 업로드 할 수 없습니다.");
-				inputFile.value = "";
-				return false;
-			} else {
-				return true;
-			}
-		}
-	}
+  for(let i=0; i<files.length; i++) {
+   // 파일 업로드 확장자 추가
+   if(!/\.((jpg|jpeg|ppt|doc|docx|xls|xlsx|hwp|png|pptx|pdf|csv)$/i.test(files[i].name)) {
+    alert('업로드 불가능한 확장자입니다.\n\n현재 파일: '+ files[i].name);
+    inputFile.value = "";
+    return false;
+   } else if(fileSize > 209715200) {
+    alert("파일은 200MB 이상 업로드 할 수 없습니다.");
+    inputFile.value = "";
+    return false;
+   } else {
+    return true;
+   }
+  }
+ }
 ```
 
 업로드 가능한 확장자만 등록하는 화이트리스트 방식으로 체크를 하여
@@ -69,21 +69,21 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
 ```
     public boolean fileFilter(String str) {
 
-		int fileIndex = str.lastIndexOf(".")+1;
-		String fileName = str.substring(fileIndex);
-		boolean result;
+  int fileIndex = str.lastIndexOf(".")+1;
+  String fileName = str.substring(fileIndex);
+  boolean result;
 
-		if(fileName.equals("jpg") || fileName.equals("jpeg") || fileName.equals("pptx")
-			|| fileName.equals("pdf") || fileName.equals("ppt") || fileName.equals("doc")
-			|| fileName.equals("docx") || fileName.equals("xls") || fileName.equals("xlsx")
-			|| fileName.equals("hwp") || fileName.equals("png") || fileName.equals("csv")) {
-			result = true;
-		}
-		else {
-			result = false;
-		}
-		return result;
-	}
+  if(fileName.equals("jpg") || fileName.equals("jpeg") || fileName.equals("pptx")
+   || fileName.equals("pdf") || fileName.equals("ppt") || fileName.equals("doc")
+   || fileName.equals("docx") || fileName.equals("xls") || fileName.equals("xlsx")
+   || fileName.equals("hwp") || fileName.equals("png") || fileName.equals("csv")) {
+   result = true;
+  }
+  else {
+   result = false;
+  }
+  return result;
+ }
 ```
 
 Controller의 파일 처리 비지니스 로직에서 multipartFile의 getOriginalFileName()으로 얻은 값을
