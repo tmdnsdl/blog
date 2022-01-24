@@ -76,7 +76,8 @@ categories: Javascript
 ```
 
 첨부파일 삭제 버튼의 bt-delete ico 클래스를 이용하여 버튼을 꾸밀 수 있다.
-https://fonts.google.com/icons?selected=Material+Icons에서 다양한 아이콘을 다운받을 수 있다.
+
+<https://fonts.google.com/icons?selected=Material+Icons>에서 다양한 아이콘을 다운받을 수 있다.
 
 첨부파일 추가 버튼을 누르면 파일 선택하는 창이 나오게 되고 파일을 선택하면
 파일명과 삭제 버튼이 priview 영역에 보이게 된다.

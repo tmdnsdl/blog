@@ -32,7 +32,7 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
 **Javascript**
 
 ```
-    function checkFiles() {
+function checkFiles() {
   const inputFile = document.getElementById("file");
   const files = inputFile.files;
   let fileSize = 0;
@@ -56,7 +56,7 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
     return true;
    }
   }
- }
+}
 ```
 
 업로드 가능한 확장자만 등록하는 화이트리스트 방식으로 체크를 하여
@@ -67,7 +67,7 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
 **Controller**
 
 ```
-    public boolean fileFilter(String str) {
+public boolean fileFilter(String str) {
 
   int fileIndex = str.lastIndexOf(".")+1;
   String fileName = str.substring(fileIndex);
@@ -83,7 +83,7 @@ javascript에서 function으로 input의 file 태그에서 업로드 될 때 마
    result = false;
   }
   return result;
- }
+}
 ```
 
 Controller의 파일 처리 비지니스 로직에서 multipartFile의 getOriginalFileName()으로 얻은 값을
