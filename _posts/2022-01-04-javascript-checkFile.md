@@ -39,22 +39,22 @@ function checkFiles() {
 
   //파일 사이즈 확인
   for(let i=0; i<files.length;i++) {
-   fileSize += files[i].size;
+    fileSize += files[i].size;
   }
 
   for(let i=0; i<files.length; i++) {
-   // 파일 업로드 확장자 추가
-   if(!/\.((jpg|jpeg|ppt|doc|docx|xls|xlsx|hwp|png|pptx|pdf|csv)$/i.test(files[i].name)) {
-    alert('업로드 불가능한 확장자입니다.\n\n현재 파일: '+ files[i].name);
-    inputFile.value = "";
-    return false;
-   } else if(fileSize > 209715200) {
-    alert("파일은 200MB 이상 업로드 할 수 없습니다.");
-    inputFile.value = "";
-    return false;
-   } else {
-    return true;
-   }
+    // 파일 업로드 확장자 추가
+    if(!/\.((jpg|jpeg|ppt|doc|docx|xls|xlsx|hwp|png|pptx|pdf|csv)$/i.test(files[i].name)) {
+      alert('업로드 불가능한 확장자입니다.\n\n현재 파일: '+ files[i].name);
+      inputFile.value = "";
+      return false;
+    } else if(fileSize > 209715200) {
+      alert("파일은 200MB 이상 업로드 할 수 없습니다.");
+      inputFile.value = "";
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 ```

@@ -16,68 +16,68 @@ categories: Spring
 
 ```
 @RequestMapping("/fileDownload")
- public String fileDownload(HttpServletResponse response, HttpServletRequest request) {
+  public String fileDownload(HttpServletResponse response, HttpServletRequest request) {
 
-  String fileName = request.getParameter("file");
+    String fileName = request.getParameter("file");
 
-  if(fileName != null) {
-   String filePath = "/download/"; // 파일 경로
-   String originalFileName = "myfile"; // 다운로드 받을 파일명
+    if(fileName != null) {
+      String filePath = "/download/"; // 파일 경로
+      String originalFileName = "myfile"; // 다운로드 받을 파일명
 
-   InputStream input = null;
-   OutputStream output = null;
+      InputStream input = null;
+      OutputStream output = null;
 
-   File file = new File(filePath, fileName);
-   try {
-    input = new FileInputStream(file);
-   } catch (FileNotFoundException e) {
-    e.printStackTrace();
-   }
+      File file = new File(filePath, fileName);
+      try {
+        input = new FileInputStream(file);
+        } catch (FileNotFoundException e) {
+         e.printStackTrace();
+        }
 
-   String client = request.getHeader("User-Agent");
-   response.reset();
-   response.setContentType("application/octet-stream");
-   response.setHeader("Content-Description", "JSP Generated Data");
+      String client = request.getHeader("User-Agent");
+      response.reset();
+      response.setContentType("application/octet-stream");
+      response.setHeader("Content-Description", "JSP Generated Data");
 
-   // IE
-   if(client.indexOf("MSIE") != -1) {
-    try {
-     response.setHeader("Content-Disposition", "attachment; filename=" + new String(originalFileName.getBytes("KSC5601"), "ISO8859_1"));
-    } catch (UnsupportedEncodingException e) {
-     // TODO Auto-generated catch block
-     e.printStackTrace();
-    }
-   } else {
-    try {
-     originalFileName = new String(originalFileName.getBytes("utf-8"), "iso-8859-1");
-    } catch (UnsupportedEncodingException e) {
-     // TODO Auto-generated catch block
-     e.printStackTrace();
-    }
-    response.setHeader("Content-Disposition", "attachment; filename=\"" + originalFileName + "\"");
-    response.setHeader("Content-Type", "application/octet-stream; charset=utf-8");
-   }
-   response.setHeader("Content-Length", ""+file.length());
+      // IE
+      if(client.indexOf("MSIE") != -1) {
+        try {
+          response.setHeader("Content-Disposition", "attachment; filename=" + new String(originalFileName.getBytes("KSC5601"), "ISO8859_1"));
+        } catch (UnsupportedEncodingException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      } else {
+        try {
+          originalFileName = new String(originalFileName.getBytes("utf-8"), "iso-8859-1");
+        } catch (UnsupportedEncodingException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+        response.setHeader("Content-Disposition", "attachment; filename=\"" + originalFileName + "\"");
+        response.setHeader("Content-Type", "application/octet-stream; charset=utf-8");
+      }
+      response.setHeader("Content-Length", ""+file.length());
 
-   try {
-    output = response.getOutputStream();
+      try {
+        output = response.getOutputStream();
 
-    byte [] buffer = new byte[(int)file.length()];
-    int readCount = 0;
-    while((readCount = input.read(buffer)) > 0) {
-     output.write(buffer,0,readCount);
-    }
+        byte [] buffer = new byte[(int)file.length()];
+        int readCount = 0;
+        while((readCount = input.read(buffer)) > 0) {
+          output.write(buffer,0,readCount);
+        }
 
-    input.close();
-    output.close();
+        input.close();
+        output.close();
 
-   }catch (IOException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-   }
-  } // file check
-  return null;
- }
+      }catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+      }
+    } // file check
+    return null;
+}
 ```
 
 JSP 페이지에서 get, post방식으로 요청하는 것을 고려하여 작성되었다.
@@ -91,14 +91,14 @@ JSP 페이지에서 get, post방식으로 요청하는 것을 고려하여 작�
 ```
 public void deleteFile(String fileName) {
   if(fileName != null) {
-   String filePath = "/upload/";
-   String deleteFile = filePath + fileName;
-   File file = new File(deleteFile);
-   if(file.exists()) {
-    file.delete();
-   }
+    String filePath = "/upload/";
+    String deleteFile = filePath + fileName;
+    File file = new File(deleteFile);
+    if(file.exists()) {
+     file.delete();
+    }
   }
- }
+}
 ```
 
 파일을 업로드 한 디렉토리에서 파일을 삭제하는 기능을 가진 메소드

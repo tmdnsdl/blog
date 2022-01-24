@@ -30,49 +30,49 @@ categories: Javascript
 **Javascript**
 
 ```
-    let addIndex = 1;
+let addIndex = 1;
 
-    // 첨부파일 추가
-    function addFiles() {
-        const fileId = "attachFile" + addIndex;
-        $("#file_add").append("<input type='file' name='file' id='"+fileId+"' onchange='previewFile(this)' style='display:none;'>");
-        // 첨부파일 추가 버튼을 클릭할 경우 새로운 input file을 생성
+// 첨부파일 추가
+function addFiles() {
+    const fileId = "attachFile" + addIndex;
+    $("#file_add").append("<input type='file' name='file' id='"+fileId+"' onchange='previewFile(this)' style='display:none;'>");
+    // 첨부파일 추가 버튼을 클릭할 경우 새로운 input file을 생성
 
-        const clickFile = document.getElementById(fileId);
-        clickFile.click();
+    const clickFile = document.getElementById(fileId);
+    clickFile.click();
 
-        addIndex++;
+    addIndex++;
+}
+
+// 등록 파일 미리보기
+function previewFile(ele) {
+    const preview = document.getElementById("preview");
+    const fileId = ele.id; // input file 아이디 값
+    const file = document.getElementById(fileId).files; // 등록한 파일
+    const fileName = file[0].name; // 등록한 파일명
+    const deleteClass = 'D' + fileId; // 파일 삭제 버튼 기능 구현을 위한 클래스명 지정
+
+    let str ="<div class='"+deleteClass+"'>";
+    str += "파일명: " + fileName;
+    str += "<button type='button' class='bt-delete ico'></button></div>";
+    preview.innerHTML += str;
+
+    const fileDiv = document.getElementsByClassName(deleteClass);
+    const fileButton = fileDiv[0].querySelector('button');
+    fileButton.setAttribute("onclick", "deleteFiles('"+deleteClass+"')");
+}
+
+// 등록 파일 삭제
+function deleteFiles(ele) {
+    if(confirm("파일을 삭제 하겠습니까?") == true) {
+        const fileName = document.getElementsByClassName(ele);
+        fileName[0].remove();
+
+        const fileId = ele.replace("D", "");
+        const fileReset = document.getElementById(fileId);
+        fileReset.value = "";
     }
-
-    // 등록 파일 미리보기
-    function previewFile(ele) {
-        const preview = document.getElementById("preview");
-        const fileId = ele.id; // input file 아이디 값
-        const file = document.getElementById(fileId).files; // 등록한 파일
-        const fileName = file[0].name; // 등록한 파일명
-        const deleteClass = 'D' + fileId; // 파일 삭제 버튼 기능 구현을 위한 클래스명 지정
-
-        let str ="<div class='"+deleteClass+"'>";
-        str += "파일명: " + fileName;
-        str += "<button type='button' class='bt-delete ico'></button></div>";
-        preview.innerHTML += str;
-
-        const fileDiv = document.getElementsByClassName(deleteClass);
-        const fileButton = fileDiv[0].querySelector('button');
-        fileButton.setAttribute("onclick", "deleteFiles('"+deleteClass+"')");
-    }
-
-    // 등록 파일 삭제
-    function deleteFiles(ele) {
-        if(confirm("파일을 삭제 하겠습니까?") == true) {
-            const fileName = document.getElementsByClassName(ele);
-            fileName[0].remove();
-
-            const fileId = ele.replace("D", "");
-            const fileReset = document.getElementById(fileId);
-            fileReset.value = "";
-        }
-    }
+}
 ```
 
 첨부파일 삭제 버튼의 bt-delete ico 클래스를 이용하여 버튼을 꾸밀 수 있다.
