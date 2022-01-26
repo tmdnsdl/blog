@@ -9,6 +9,7 @@ categories: Javascript
 ---
 
 Javascript의 라이브러리인 chart.js를 이용하여 데이터 차트를 구현해보자.
+
 <https://www.chartjs.org/docs/latest/>
 
 ---
@@ -35,7 +36,7 @@ const data = {
         labels: ['품질', '설비', '생산', '물류', '인사', '연구개발'], // x축 데이터
         datasets: [{
             label: 'my chart', // 범례 타이틀
-            data: [12, 19, 3, 5, 2, 3], // 바 데이터
+            data: [12, 19, 3, 5, 2, 3], // y축 데이터
             backgroundColor: [ // 바 색상
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -53,13 +54,14 @@ const data = {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1 // 바 테두리 굵기
-        }]
+        }
         // datasets 은 다중 데이터 지정 가능
+        ]
     }
 
 // 차트 설정
 const config = {
-    type: 'bar', // 차트의 종류 : 바 차트
+    type: 'bar', // line, bar, doughnut, pie
     data : data,
     options: {
         responsive : false, // 반응형 차트 설정
@@ -113,4 +115,5 @@ const ctx = document.getElementById('myChart').getContext('2d'); // 2d 차트
 const myChart = new Chart(ctx, config);
 ```
 
+차트의 모양, 데이터를 설정하여 내가 원하는 차트를 그려낼 수 있다.
 <https://www.chartjs.org/docs/3.6.2/>에서 옵션, 설정 등에 대해 더 많은 정보를 얻을 수 있다.
