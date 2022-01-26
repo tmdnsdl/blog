@@ -116,4 +116,5 @@ const myChart = new Chart(ctx, config);
 ```
 
 차트의 모양, 데이터를 설정하여 내가 원하는 차트를 그려낼 수 있다.
+
 <https://www.chartjs.org/docs/3.6.2/>에서 옵션, 설정 등에 대해 더 많은 정보를 얻을 수 있다.
