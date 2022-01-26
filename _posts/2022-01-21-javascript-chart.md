@@ -9,7 +9,7 @@ categories: Javascript
 ---
 
 Javascript의 라이브러리인 chart.js를 이용하여 데이터 차트를 구현해보자.
-<https://github.com/chartjs/Chart.js/releases/tag/v3.6.2>에서 다운로드가 가능하다.
+<https://www.chartjs.org/docs/latest/>
 
 ---
 
@@ -17,10 +17,12 @@ Javascript의 라이브러리인 chart.js를 이용하여 데이터 차트를 �
 
 ```
 <script src="resources/js/chart.js"></script>
-<canvas id="myChart" width="400" height="400"></canvas>
+<div>
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
 ```
 
-footer에 chart.js 파일 경로를 설정해준다.
+스크립트에 chart.js 파일 경로를 설정해준다.
 차트를 넣을 영역에 캔버스에 id 값과 크기를 설정한다.
 
 ---
@@ -28,15 +30,13 @@ footer에 chart.js 파일 경로를 설정해준다.
 **Javascript**
 
 ```
-const ctx = document.getElementById('myChart').getContext('2d'); // 2d 차트
-const myChart = new Chart(ctx, {
-    type: 'bar', // 바 차트
-    data: {
-        labels: ['품질', '설비', '생산', '물류', '인사', '연구개발'],
+// 차트 데이터 설정
+const data = {
+        labels: ['품질', '설비', '생산', '물류', '인사', '연구개발'], // x축 데이터
         datasets: [{
-            label: 'my dataset',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
+            label: 'my chart', // 범례 타이틀
+            data: [12, 19, 3, 5, 2, 3], // 바 데이터
+            backgroundColor: [ // 바 색상
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(255, 206, 86, 0.2)',
@@ -44,7 +44,7 @@ const myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 0.2)',
                 'rgba(255, 159, 64, 0.2)'
             ],
-            borderColor: [
+            borderColor: [ // 바 테두리 색상
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(255, 206, 86, 1)',
@@ -52,38 +52,65 @@ const myChart = new Chart(ctx, {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 1 // 바 테두리 굵기
         }]
-    },
+        // datasets 은 다중 데이터 지정 가능
+    }
+
+// 차트 설정
+const config = {
+    type: 'bar', // 차트의 종류 : 바 차트
+    data : data,
     options: {
-        responsive : false, // 반응형
+        responsive : false, // 반응형 차트 설정
         scales: {
             x: {
                 stacked : true // 누적 막대 그래프 표시
             },
             y: {
+                title : {
+                    display : true,
+                    text : 'y값'
+                    // y축 범주 추가
+                }
                 stacked : true
             }
         },
-        indexAxis : 'x', // 인덱스 축 설정
+        indexAxis : 'x', // 가로,세로 축 변경
         plugins : {
             legend : {
-                display : false
+                display : false // 범례 추가
+            },
+            title : {
+                display : true, // title
+                text : 'bar chart'
             },
             datalabels : {
                 color : 'white',
                 font : {
                     size : 12
                 }
-            },
-            showValue : {
-                fontStyle : 'Helvetica',
-                color : 'black',
-                fontSize : 20
             }
         }
     }
-});
+}
+
+// 기본 폰트
+Chart.defaults.font.family = '폰트';
+Chart.defaults.font.size = 14;
+Chart.defaults.color = '#ffffff';
+
+// gridlines
+Chart.defaults.scale.gridLines.display = false;
+
+// title settings
+Chart.defaults.plugins.title.font.size = 20
+Chart.defaults.plugins.title.font.style = "normal";
+Chart.defaults.plugins.title.color = '#FFFFFF';
+
+// 차트 생성
+const ctx = document.getElementById('myChart').getContext('2d'); // 2d 차트
+const myChart = new Chart(ctx, config);
 ```
 
 <https://www.chartjs.org/docs/3.6.2/>에서 옵션, 설정 등에 대해 더 많은 정보를 얻을 수 있다.
