@@ -53,7 +53,25 @@ const data = {
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1 // 바 테두리 굵기
+            borderWidth: 1, // 바 테두리 굵기
+            datalabels : { // 바 내부 데이터 표시
+                color : 'white',
+                font : {
+                    size : 12
+                }
+            }
+        },
+        {
+            type : "line",
+            label: "data",
+            data : [20,27,28,15,33,29],
+            borderColor : 'rgb(54, 162, 235)',
+            backgroundColor : "rgb(54,162,235)",
+            borderWidth : 1,
+            fill : false, // 음영 채우기
+            datalabels : {
+                display :false
+            }
         }
         // datasets 은 다중 데이터 지정 가능
         ]
@@ -65,6 +83,7 @@ const config = {
     data : data,
     options: {
         responsive : false, // 반응형 차트 설정
+        maxBarThickness : 20, // bar 굵기 설정
         scales: {
             x: {
                 stacked : true // 누적 막대 그래프 표시
@@ -85,13 +104,7 @@ const config = {
             },
             title : {
                 display : true, // title
-                text : 'bar chart'
-            },
-            datalabels : {
-                color : 'white',
-                font : {
-                    size : 12
-                }
+                text : 'chart'
             }
         }
     }
