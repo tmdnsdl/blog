@@ -9,6 +9,7 @@ categories: Server
 ---
 
 웹 서버를 구축하는데는 주로 톰캣을 이용하여 웹 서버를 구축하게 된다.
+
 이번에는 톰캣 고양이를 사용하여 서버를 구축하는 방법을 알아보자.
 
 ---
@@ -27,6 +28,7 @@ categories: Server
 
 zip 파일을 다운로드 받으면 원하는 디렉토리에 압축을 풀어주자.
 압축을 푼 다음 bin 폴더에서 startup.bat / shutdown.bat / service.bat 파일을 수정해줘야 한다.
+
 리눅스 운영체제의 경우 sh파일을 변경해야 하나 이번 포스팅에서는 윈도우 환경만 설명하겠다.
 
 ---
@@ -46,8 +48,6 @@ SERVER_NAME은 원하는 서버 명을 지정해준다.
 JAVA_HOME은 jdk가 설치된 디렉토리를 설정해준다.
 ```
 
----
-
 ```
 shutdown.bat
 
@@ -58,8 +58,6 @@ set "SERVER_NAME=Tomcat Server 8.5.1"
 set "JAVA_HOME=C:\Program Files\Java\jdk1.8.0_261"
 를 추가해준다.
 ```
-
-![tomcat.bat.config](../docs/assets/images/tomcat_bat1.png)
 
 ---
 
@@ -88,13 +86,24 @@ DISPLAYNAME은 서비스에 올라가는 서비스 명이다.
 위의 설정이 완료 되었으면 cmd에서 톰캣을 압축해제한 디렉토리의 bin 폴더에서
 명령어를 실행하면 톰캣 서비스가 등록된다.
 
-cmd 환경에서 cd C:\Program Files\Apache Software Foundation\Tomcat 8.5.1\bin을 입력하고
-경로 설정이 되었으면 service.bat install 명령어를 입력하여 서비스를 등록한다.
+```
+cmd 환경에서
+cd [톰캣 디렉토리]\bin을 입력
+cd C:\Program Files\Apache Software Foundation\Tomcat 8.5.1\bin
 
-서비스를 삭제하고 싶은 경우 위의 디렉토리에서 service.bat remove 명령어를 입력하여 서비스를 삭제할 수 있다.
+경로 설정 후
+service.bat install
+명령어를 입력하여 서비스를 등록
 
-톰캣을 설치파일(exe)로 다운받아 설치하게 되면 명령어를 입력하지 않아도 알아서 서비스에 톰캣이 등록되지만
-여러개의 톰캣 서버를 구축해야 하는 경우는 zip 파일로 위와 같이 설정하여 서비스를 등록 해줘야 한다.
+서비스를 삭제하고 싶은 경우 같은 경로에서
+service.bat remove
+명령어를 입력하여 서비스를 삭제
+```
 
-여러개의 톰캣 서버를 구축하는 경우 유의해야 할 사항은 server.xml에서 포트번호를 각각 겹치지 않게
-지정해줘야 한다. Connector port와 redirectPort를 각각 다르게 설정해주어 다중 서버를 구축할 수 있다.
+톰캣을 설치파일(exe)로 다운받아 설치하게 되면 명령어를 입력하지 않아도
+알아서 서비스에 톰캣이 등록되지만 여러개의 톰캣 서버를 구축해야 하는 경우는
+zip 파일로 위와 같이 설정하여 서비스를 각각 등록 해줘야 한다.
+
+여러개의 톰캣 서버를 구축하는 경우 유의해야 할 사항은 server.xml에서
+포트번호를 각각 겹치지 않게 지정해줘야 한다.
+Connector port와 redirectPort를 각각 다르게 설정해주어 여러개의 서버를 구축할 수 있다.
