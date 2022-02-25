@@ -43,12 +43,8 @@ set "SERVER_NAME=Tomcat Server 8.5.1"
 set "JAVA_HOME=C:\Program Files\Java\jdk1.8.0_261"
 를 추가해준다.
 
-CATALINA_HOME / CATALINA_BASE는 톰캣 압축을 푼 곳의 디렉토리를 설정해준다.
-SERVER_NAME은 원하는 서버 명을 지정해준다.
-JAVA_HOME은 jdk가 설치된 디렉토리를 설정해준다.
-```
+-----------------------------------------------------------------------------
 
-```
 shutdown.bat
 
 startup.bat과 마찬가지로 setlocal 위에
@@ -57,6 +53,10 @@ set "CATALINA_BASE=C:\Program Files\Apache Software Foundation\Tomcat 8.5.1"
 set "SERVER_NAME=Tomcat Server 8.5.1"
 set "JAVA_HOME=C:\Program Files\Java\jdk1.8.0_261"
 를 추가해준다.
+
+CATALINA_HOME / CATALINA_BASE는 톰캣 압축을 푼 곳의 디렉토리를 설정해준다.
+SERVER_NAME은 원하는 서버 명을 지정해준다.
+JAVA_HOME은 jdk가 설치된 디렉토리를 설정해준다.
 ```
 
 ---
