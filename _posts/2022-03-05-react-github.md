@@ -45,6 +45,8 @@ cd [프로젝트 경로]
 npm run deploy
 ```
 
+---
+
 명령어로 npm run deploy를 입력하게 되면 프로젝트를 github-pages에
 빌드하는 작업이 진행되고 deploy가 진행된다.
 
