@@ -106,4 +106,4 @@ zip 파일로 위와 같이 설정하여 서비스를 각각 등록 해줘야 �
 
 여러개의 톰캣 서버를 구축하는 경우 유의해야 할 사항은 server.xml에서
 포트번호를 각각 겹치지 않게 지정해줘야 한다.
-Connector port와 redirectPort를 각각 다르게 설정해주어 여러개의 서버를 구축할 수 있다.
+Connector port와 Server port를 각각 다르게 설정해주어 여러개의 서버를 구축할 수 있다.
