@@ -54,10 +54,13 @@ const data = {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1, // 바 테두리 굵기
-            datalabels : { // 바 내부 데이터 표시
+            datalabels : { // 바 내부 데이터 설정
                 color : '#616161',
                 font : {
                     size : 12
+                },
+                padding : {
+                    bottom : 5
                 }
             }
         },
@@ -79,7 +82,7 @@ const data = {
 
 // 차트 설정
 const config = {
-    plugins:[ChartDataLabels], // datalabels 플러그인 추가
+    plugins : [ChartDataLabels], // datalabels 플러그인 추가
     type: 'bar', // line, bar, doughnut, pie
     data : data,
     options: {
@@ -114,6 +117,11 @@ const config = {
             title : {
                 display : true, // title
                 text : 'chart'
+            },
+            datalabels : {
+                // datalabel 값 위치 설정
+                anchor : 'end', // center, start, end
+	            align : 'center' // center, start, end, right, bottom, left, top
             }
         }
     }
