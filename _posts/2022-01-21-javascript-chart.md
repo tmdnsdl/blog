@@ -55,7 +55,7 @@ const data = {
             ],
             borderWidth: 1, // 바 테두리 굵기
             datalabels : { // 바 내부 데이터 표시
-                color : 'white',
+                color : '#616161',
                 font : {
                     size : 12
                 }
@@ -79,6 +79,7 @@ const data = {
 
 // 차트 설정
 const config = {
+    plugins:[ChartDataLabels], // datalabels 플러그인 추가
     type: 'bar', // line, bar, doughnut, pie
     data : data,
     options: {
@@ -86,16 +87,24 @@ const config = {
         maxBarThickness : 20, // bar 굵기 설정
         scales: {
             x: {
-                stacked : true // 누적 막대 그래프 표시
-            },
+	                grid : {
+	                	display : false // 눈금 선 표시 여부
+	                },
+	                axis : 'x',
+	                ticks: {
+	                    minRotation: 25 // 표시되는 라벨 기울기 설정
+	                 },
+                    stacked : true // 누적 막대 그래프 여부
+	            },
             y: {
-                title : {
-                    display : true,
-                    text : 'y값'
-                    // y축 범주 추가
-                }
-                stacked : true
-            }
+	            	grid : {
+	                	display : true
+	                },
+	                axis : 'y',
+	                ticks: {
+	                    stepSize : 2 // 라벨 값 표시 단위 (2,4,6..)
+	                 },
+	            },
         },
         indexAxis : 'x', // 가로,세로 축 변경
         plugins : {
@@ -114,9 +123,6 @@ const config = {
 Chart.defaults.font.family = '폰트';
 Chart.defaults.font.size = 14;
 Chart.defaults.color = '#ffffff';
-
-// gridlines
-Chart.defaults.scale.gridLines.display = false;
 
 // title settings
 Chart.defaults.plugins.title.font.size = 20
