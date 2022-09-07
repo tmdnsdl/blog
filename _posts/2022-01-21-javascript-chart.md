@@ -17,7 +17,8 @@ Javascript의 라이브러리인 chart.js를 이용하여 데이터 차트를 �
 **Html**
 
 ```
-<script src="resources/js/chart.js"></script>
+<script src="resources/js/chart_3.6.2.min.js"></script>
+<script src="resources/js/chartjs-plugin-datalabels.min.js"></script>
 <div>
     <canvas id="myChart" width="400" height="400"></canvas>
 </div>
