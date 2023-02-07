@@ -17,8 +17,8 @@ vscode와 같은 텍스트 에디터로도 스프링 프로젝트를 현업에�
 **기본 환경 설정**
 
 1. Java 설치
-- OpenJDK 11(https://developers.redhat.com/products/openjdk/download)
-- OpenJDK 1.8(https://developers.redhat.com/products/openjdk/download)
+- OpenJDK 11
+- OpenJDK 1.8
 2. Java 환경 변수 편집
 3. Git 설치
 
@@ -28,6 +28,7 @@ vscode와 같은 텍스트 에디터로도 스프링 프로젝트를 현업에�
 - Extension Pack for Java
 - Spring Boot Extension Pack
 2. setting.json 설정
+
 ```
     "java.configuration.runtimes": [
         {
