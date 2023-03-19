@@ -6,14 +6,7 @@ categories: git
 
 ### Git Local Repository 생성과 github 연동
 
----
-
-git 으로 local repository 생성 하여 작업 후에
-github repository에 연동하는 방법에 대해 알아보자.
-
----
-
-### Git Local Repository 생성 / 연동
+git 으로 local repository 생성 하여 작업 후에 github repository에 연동하는 방법에 대해 알아보자.
 
 1. 터미널에서 작업 중인 디렉토리에서 git init 명령어를 입력한다
 2. github repository를 생성한다
