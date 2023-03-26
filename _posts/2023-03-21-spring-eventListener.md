@@ -20,6 +20,6 @@ public void contextRefreshedEvent(ContextRefreshedEvent event) {
     // 서비스 추가
 }
 ```
-ContextRefreshedEvent는 ApplicationContext(스프링 컨테이너)를 초기화하거나 새로 고칠 경우에 이벤트를 발생시키고 그것을 감지하여 해당 메소드가 동작하게 된다.
+ContextRefreshedEvent는 ApplicationContext(스프링 컨테이너)를 초기화하거나 새로 고칠 경우에 이벤트를 감지하여 해당 메소드가 동작하게 된다.
 
-위의 메소드를 사용하여 시작할 서비스에 대해 정의 할 수 있다.
+위의 메소드를 사용하여 처음 시작할 기능에 대해 정의할 수 있다.

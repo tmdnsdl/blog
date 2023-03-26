@@ -1,5 +1,5 @@
 ---
-title: "Linux 명령어 정리 - 서버 로그"
+title: "Linux 명령어 정리 - 서버 로그 출력"
 date: 2023-03-24
 categories: server
 ---
